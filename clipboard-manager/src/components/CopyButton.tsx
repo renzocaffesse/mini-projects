@@ -1,4 +1,5 @@
 import { useState, useCallback } from "react";
+import { toast } from "react-toastify";
 import Button from "./Button";
 
 interface CopyButtonProps {
@@ -13,9 +14,11 @@ const CopyButton = ({ text }: CopyButtonProps) => {
     try {
       await navigator.clipboard.writeText(text);
       setCopied(true);
+      toast.success("Copied to clipboard!");
       setTimeout(() => setCopied(false), 1500);
     } catch (error) {
       console.error("Failed to copy: ", error);
+      toast.error("Failed to copy!");
     }
   }, [text]);
 
