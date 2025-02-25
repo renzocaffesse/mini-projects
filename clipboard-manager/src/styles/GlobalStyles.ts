@@ -16,6 +16,10 @@ const GlobalStyles = createGlobalStyle`
     align-items: center;
     height: 100vh;
   }
+  
+  .Toastify__progress-bar {
+    background-color: ${({ theme }) => theme.colors.progress} !important;
+  }
 `;
 
 export default GlobalStyles;
