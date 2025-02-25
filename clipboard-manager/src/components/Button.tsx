@@ -7,7 +7,7 @@ type ButtonProps = {
 const Button = styled.button<ButtonProps>`
   background: ${({ theme, disabled }) =>
     disabled ? theme.colors.disabled : theme.colors.primary};
-  color: ${({ disabled }) => (disabled ? "#888" : "white")}; /* Hace el texto gris oscuro si está deshabilitado */
+  color: ${({ disabled }) => (disabled ? "#888" : "white")};
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
